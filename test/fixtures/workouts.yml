@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  focus: MyString
+  work_time: MyString
+  rest_time: MyString
+  rounds: MyString
+
+two:
+  name: MyString
+  focus: MyString
+  work_time: MyString
+  rest_time: MyString
+  rounds: MyString
