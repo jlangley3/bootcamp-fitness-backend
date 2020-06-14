@@ -8,9 +8,9 @@
 require 'faker'
 require 'securerandom'
 
+ExerciseWorkout.delete_all
 Exercise.delete_all
 Workout.delete_all
-ExerciseWorkout.delete_all
 
 curl = Exercise.create(name: "Bicep Curl", muscle_group: "Arms", equipment: "Dumbbell", description: "Stand holding a dumbbell in each hand with your arms hanging by your sides. Ensure your elbows are close to your torso and your palms facing forward. Keeping your upper arms stationary, exhale as you curl the weights up to shoulder level while contracting your biceps")
 body_squat = Exercise.create(name: "Body Weight Squat", muscle_group: "Legs", equipment: "None", description: "Set your feet shoulder-width apart, toes slightly turned out. Pull in your lower abs, and keep your eyes forward.
