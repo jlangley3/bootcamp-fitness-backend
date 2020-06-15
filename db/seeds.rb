@@ -42,6 +42,10 @@ e7 = ExerciseWorkout.create(exercise: front_raise, workout: arms)
 e8 = ExerciseWorkout.create(exercise: calf_raise, workout: legs)
 e9 = ExerciseWorkout.create(exercise: clean, workout: legs)
 e10 = ExerciseWorkout.create(exercise: body_squat, workout: legs)
+e11 = ExerciseWorkout.create(exercise: front_raise, workout: back)
+e12 = ExerciseWorkout.create(exercise: calf_raise, workout: back)
+e13 = ExerciseWorkout.create(exercise: clean, workout: back)
+e14 = ExerciseWorkout.create(exercise: body_squat, workout: back)
 
 
 
