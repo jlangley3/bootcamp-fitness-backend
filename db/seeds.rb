@@ -21,10 +21,16 @@ cobra = Exercise.create(name: "Cobra Push-Up", muscle_group: "Chest", equipment:
 skull_crushers = Exercise.create(name: "Skull Crushers", muscle_group: "Triceps", equipment: "None", description:"skull crushers")
 dead_lift = Exercise.create(name: "Dead Lift", muscle_group: "back", equipment: "Dumbell", description:"DO the cobra")
 
-back = Workout.create(name:"Back Blaster", focus: "Back", work_time: 30, rest_time: 10, rounds: 10)
-butt = Workout.create(name:"Butt Blaster", focus: "Legs", work_time: 30, rest_time: 10, rounds: 10)
-arms = Workout.create(name:"Armed", focus: "Arms", work_time: 30, rest_time: 10, rounds: 10)
-chest = Workout.create(name:"Pecked", focus: "Chest", work_time: 30, rest_time: 10, rounds: 10)
+clean = Exercise.create(name: "Clean", muscle_group: "Back", equipment: "Yes", description:"Arms straight, plank position, kep body stiff abs and glutes tight. lower body towars the ground, chest should touch the ground forst, and then push away the ground")
+shoulder_press = Exercise.create(name: "Shoulder Press", muscle_group: "Shoulders", equipment: "None", description:"DO the cobra")
+calf_raise = Exercise.create(name: "Calf Raises", muscle_group: "legs", equipment: "None", description:"skull crushers")
+front_raise = Exercise.create(name: "Front Raise", muscle_group: "Shoulders", equipment: "Dumbell", description:"DO the cobra")
+
+back = Workout.create(name:"Back Blaster", focus: "Back", work_time: 5, rest_time: 2, rounds: 3)
+butt = Workout.create(name:"Butt Blaster", focus: "Legs", work_time: 4, rest_time: 3, rounds: 2)
+arms = Workout.create(name:"Armed", focus: "Arms", work_time: 3, rest_time: 4, rounds: 1)
+chest = Workout.create(name:"Pecked", focus: "Chest", work_time: 2, rest_time: 5, rounds: 2)
+legs = Workout.create(name:"Leg Day", focus: "Lower Body", work_time: 2, rest_time: 5, rounds: 2)
 
 e1 = ExerciseWorkout.create(exercise: curl, workout: arms)
 e2 = ExerciseWorkout.create(exercise: skull_crushers, workout: arms)
@@ -32,10 +38,10 @@ e3 = ExerciseWorkout.create(exercise: cobra, workout: chest)
 e4 = ExerciseWorkout.create(exercise: push_up, workout: chest)
 e5 = ExerciseWorkout.create(exercise: body_squat, workout: butt)
 e6 = ExerciseWorkout.create(exercise: dead_lift, workout: butt)
-# e7 = ExerciseWorkout.create(exercise: curl, workout: arms)
-# e8 = ExerciseWorkout.create(exercise: curl, workout: arms)
-# e9 = ExerciseWorkout.create(exercise: curl, workout: arms)
-# e10 = ExerciseWorkout.create(exercise: curl, workout: arms)
+e7 = ExerciseWorkout.create(exercise: front_raise, workout: arms)
+e8 = ExerciseWorkout.create(exercise: calf_raise, workout: legs)
+e9 = ExerciseWorkout.create(exercise: clean, workout: legs)
+e10 = ExerciseWorkout.create(exercise: body_squat, workout: legs)
 
 
 
