@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  post '/users/names', to: 'users#names'
+  resources :users
   resources :exercise_workouts
   resources :workouts
   resources :exercises

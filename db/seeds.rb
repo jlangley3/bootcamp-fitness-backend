@@ -11,6 +11,14 @@ require 'securerandom'
 ExerciseWorkout.delete_all
 Exercise.delete_all
 Workout.delete_all
+User.delete_all
+
+a = User.create(name:"Sam", password:"12345")
+b = User.create(name:"Bam", password:"12345")
+p = User.create(name:"Pam", password:"12345")
+j = User.create(name:"Jam", password:"12345")
+r = User.create(name:"Ram", password:"12345")
+c = User.create(name:"Cam", password:"12345")
 
 curl = Exercise.create(name: "Bicep Curl", muscle_group: "Arms", equipment: "Dumbbell", description: "Stand holding a dumbbell in each hand with your arms hanging by your sides. Ensure your elbows are close to your torso and your palms facing forward. Keeping your upper arms stationary, exhale as you curl the weights up to shoulder level while contracting your biceps")
 body_squat = Exercise.create(name: "Body Weight Squat", muscle_group: "Legs", equipment: "None", description: "Set your feet shoulder-width apart, toes slightly turned out. Pull in your lower abs, and keep your eyes forward.
@@ -26,11 +34,11 @@ shoulder_press = Exercise.create(name: "Shoulder Press", muscle_group: "Shoulder
 calf_raise = Exercise.create(name: "Calf Raises", muscle_group: "legs", equipment: "None", description:"skull crushers")
 front_raise = Exercise.create(name: "Front Raise", muscle_group: "Shoulders", equipment: "Dumbell", description:"DO the cobra")
 
-back = Workout.create(name:"Back Blaster", focus: "Back", work_time: 5, rest_time: 2, rounds: 3)
-butt = Workout.create(name:"Butt Blaster", focus: "Legs", work_time: 4, rest_time: 3, rounds: 2)
-arms = Workout.create(name:"Armed", focus: "Arms", work_time: 3, rest_time: 4, rounds: 1)
-chest = Workout.create(name:"Pecked", focus: "Chest", work_time: 2, rest_time: 5, rounds: 2)
-legs = Workout.create(name:"Leg Day", focus: "Lower Body", work_time: 2, rest_time: 5, rounds: 2)
+back = Workout.create(name:"Back Blaster", focus: "Back", work_time: 5, rest_time: 2, rounds: 3, user:j)
+butt = Workout.create(name:"Butt Blaster", focus: "Legs", work_time: 4, rest_time: 3, rounds: 2, user:j)
+arms = Workout.create(name:"Armed", focus: "Arms", work_time: 3, rest_time: 4, rounds: 1, user:j)
+chest = Workout.create(name:"Pecked", focus: "Chest", work_time: 2, rest_time: 5, rounds: 2, user: r)
+legs = Workout.create(name:"Leg Day", focus: "Lower Body", work_time: 2, rest_time: 5, rounds: 2, user: r)
 
 e1 = ExerciseWorkout.create(exercise: curl, workout: arms)
 e2 = ExerciseWorkout.create(exercise: skull_crushers, workout: arms)

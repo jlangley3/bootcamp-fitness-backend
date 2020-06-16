@@ -6,6 +6,7 @@ class CreateWorkouts < ActiveRecord::Migration[6.0]
       t.integer :work_time
       t.integer :rest_time
       t.integer :rounds
+      
 
       t.timestamps
     end
