@@ -12,7 +12,15 @@ class UsersController < ApplicationController
         name = params[:name]
         password = params[:password]
         user = User.find_or_create_by(name: name, password: password)
-        render json: user, include: [:workouts]
+        render json: user.to_json(:include => {
+            :workouts=> {:include => [:exercises]}
+          })
+    end
+    def show
+        user = User.find(params[:id])
+        render json: user.to_json(:include => {
+            :workouts=> {:include => [:exercises]}
+          })
     end
 
     private
