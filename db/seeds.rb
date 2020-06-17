@@ -13,10 +13,10 @@ Exercise.delete_all
 Workout.delete_all
 User.delete_all
 
-a = User.create(name:"Sam", password:"12345")
+j = User.create(name:"Jam", password:"12345")
+s = User.create(name:"Sam", password:"12345")
 b = User.create(name:"Bam", password:"12345")
 p = User.create(name:"Pam", password:"12345")
-j = User.create(name:"Jam", password:"12345")
 r = User.create(name:"Ram", password:"12345")
 c = User.create(name:"Cam", password:"12345")
 
@@ -37,8 +37,8 @@ front_raise = Exercise.create(name: "Front Raise", muscle_group: "Shoulders", eq
 back = Workout.create(name:"Back Blaster", focus: "Back", work_time: 5, rest_time: 2, rounds: 3, user:j)
 butt = Workout.create(name:"Butt Blaster", focus: "Legs", work_time: 4, rest_time: 3, rounds: 2, user:j)
 arms = Workout.create(name:"Armed", focus: "Arms", work_time: 3, rest_time: 4, rounds: 1, user:j)
-chest = Workout.create(name:"Pecked", focus: "Chest", work_time: 2, rest_time: 5, rounds: 2, user: r)
-legs = Workout.create(name:"Leg Day", focus: "Lower Body", work_time: 2, rest_time: 5, rounds: 2, user: r)
+chest = Workout.create(name:"Pecked", focus: "Chest", work_time: 2, rest_time: 5, rounds: 2, user: c)
+legs = Workout.create(name:"Leg Day", focus: "Lower Body", work_time: 2, rest_time: 5, rounds: 2, user: c)
 
 e1 = ExerciseWorkout.create(exercise: curl, workout: arms)
 e2 = ExerciseWorkout.create(exercise: skull_crushers, workout: arms)

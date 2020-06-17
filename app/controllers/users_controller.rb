@@ -22,6 +22,12 @@ class UsersController < ApplicationController
             :workouts=> {:include => [:exercises]}
           })
     end
+    def destroy  
+        byebug
+        user = User.find(params[:id]) 
+        
+        render json: {message: "delete complete"} 
+    end
 
     private
 
