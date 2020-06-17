@@ -19,7 +19,7 @@ class WorkoutsController < ApplicationController
     def destroy  
         workout = Workout.find(params[:id]) 
         workout.destroy
-        render json: {message: "delete complete"} 
+        render json: workout, include: [:exercises] 
     end
 
     private
